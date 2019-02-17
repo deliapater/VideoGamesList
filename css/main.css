@@ -1,11 +1,15 @@
 body {
   font-family: Palatino;
+  background: url('./images/background.jpg');
+  background-size: 100%;
+  color: silver;
 }
 
 #form-wrapper {
   width: 100%;
   display: flex;
   flex-direction: row;
+  color: black;
 }
 
 .form-item {
@@ -14,27 +18,60 @@ body {
 
 label.primary {
   display: block;
-  margin: 0.4em 0;
+  margin: 0.8em 0;
 }
 
-label::after {
-  content: ":";
+button:hover {
+	background-color: #eee;
+	cursor: pointer;
+	color: #000;
 }
+
 
 button, input[type="submit"] {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  background-color: #20B2AA;
+  border-radius: 10%;
 }
 
 #video-games-list {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
+  color: silver;
+  margin-left: 5px;
+  margin-top: 10px;
+  background-color: black;
+  border: 1px solid black;
+  opacity: 0.5;
+  width: 700px;
+  padding: 10px;
+  filter: alpha(opacity=50);
+  border-radius: 5%;
 }
 
-/* .form-item {
+.form-item {
   margin: 0.5rem 0.5rem;
-  padding: 0.5rem 0.8rem;
-  border: 1px solid #20437c;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid #008080;
   border-radius: 5%;
-  background: #ddeaff;
-} */
+  background: #20B2AA;
+
+}
+
+.platform-box {
+  margin-left: 5px;
+  margin-top: 10px;
+  background-color: black;
+  border: 1px solid black;
+  opacity: 0.5;
+  width: 380px;
+  padding: 10px;
+  filter: alpha(opacity=50);
+  border-radius: 5%;
+}
+
+#platform_header {
+  font-size: 1.2em;
+  font-weight: bold;
+}
