@@ -1,43 +1,57 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Video Games List App</title>
-    <script src="js/app.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-  </head>
-  <body>
-    <form id="new-item-form">
-      <div id="form-wrapper">
-        <div class="form-item">
-          <label for="title" class="primary">Title</label>
-          <input type="text" id="title" required/>
-        </div>
-
-        <div class="form-item">
-          <label for="developer" class="primary">Developer</label>
-          <input type="text" id="developer" required/>
-        </div>
-
-        <div class="form-item">
-          <label for="genre" class="primary">Genre</label>
-          <select id="genre">
-            <option value="" disabled selected></option>
-            <option value="Role-playing">Role-playing</option>
-            <option value="Fighting">Fighting</option>
-            <option value="Shooter">Shooter</option>
-            <option value="Survival">Survival</option>
-            <option value="Racing">Racing</option>
-            <option value="Platform">Platform</option>
-          </select>
-        </div>
+<head>
+  <meta charset="utf-8">
+  <title>Video Games List App</title>
+  <script src="js/app.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+</head>
+<body>
+  <form id="new-item-form">
+    <div id="form-wrapper">
+      <div class="form-item">
+        <label for="title" class="primary">Title</label>
+        <input type="text" id="title" required/>
       </div>
-      <input type="submit" value="save"/>
-    </form>
-    <button id ="delete-all" type="reset" value="Reset">Delete all</button>
 
-    <h1>Video Games List</h1>
-    <div id="video-games-list"></div>
-  </form>
-  </body>
+      <div class="form-item">
+        <label for="developer" class="primary">Developer</label>
+        <input type="text" id="developer" required/>
+      </div>
+
+      <div class="form-item">
+        <label for="genre" class="primary">Genre</label>
+        <select id="genre">
+          <option value="" disabled selected></option>
+          <option value="Role-playing">Role-playing</option>
+          <option value="Fighting">Fighting</option>
+          <option value="Shooter">Shooter</option>
+          <option value="Survival">Survival</option>
+          <option value="Racing">Racing</option>
+          <option value="Platform">Platform</option>
+        </select>
+      </div>
+    </div>
+
+    <form id="radio-btn">
+      <div>
+        <p>Platform</p>
+        <input type="radio" id="ps4" name="platform-option" value="ps4">
+        <label for="platform">PS4</label>
+        <input type="radio" id="xbox-one" name="platform-option" value="xbox-one"">
+        <label for="platform">Xbox One</label>
+        <input type="radio" id="nintendo" name="platform-option" value="nintendo">
+        <label for="platform">Nintendo Switch</label>
+        <input type="radio" id="steam" name="platform-option" value="steam">
+        <label for="platform">Steam</label>
+      </div>
+        <div id="platform-selection"></div>
+
+       <button type="submit">Save</button> <button id ="delete-all"
+        type="reset" value="Reset">Delete all</button>
+
+  <h1>Video Games List</h1>
+  <div id="video-games-list"></div>
+
+</body>
 </html>

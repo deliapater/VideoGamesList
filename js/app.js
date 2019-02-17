@@ -5,36 +5,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const deleteAllButton = document.querySelector('#delete-all');
   deleteAllButton.addEventListener('click', handleDeleteAllClick);
-})
 
-const handleNewItemFormSubmit = function (event) {
+});
+
+const handleNewItemFormSubmit = function(event) {
   event.preventDefault();
 
-  const videoGamesListItem= createVideoGamesListItem(event.target);
+  const listElement = document.createElement('li');
+
+  const title = createElementWithText('h2', this.title.value, listElement);
+
+  const developer = createElementWithText('h3', this.developer.value, listElement);
+
+  const genre = createElementWithText('p', this.genre.value, listElement);
+
+  const platform = createElementWithText('p', this.platform, listElement);
+
+
   const videoGamesList = document.querySelector('#video-games-list');
-  videoGamesList.appendChild(videoGamesListItem);
+  videoGamesList.appendChild(listElement);
 
-  event.target.reset();
-}
+  this.reset();
+};
 
-const createVideoGamesListItem = function (form) {
-  const videoGamesListItem = document.createElement('li');
-  videoGamesListItem.classList.add('#video-games-list');
 
-  const title = document.createElement('h2');
-  title.textContent = form.title.value;
-  videoGamesListItem.appendChild(title);
-
-  const developer = document.createElement('h3');
-  developer.textContent = form.developer.value;
-  videoGamesListItem.appendChild(developer);
-
-  const genre = document.createElement('p');
-  genre.textContent = form.genre.value;
-  videoGamesListItem.appendChild(genre);
-
-  return videoGamesListItem;
-}
+const createElementWithText = function(element, text, parent){
+  const newElement = document.createElement(element);
+  newElement.textContent = text;
+  parent.appendChild(newElement);
+};
 
 const handleDeleteAllClick = function (event) {
   const videoGamesList = document.querySelector('#video-games-list');
