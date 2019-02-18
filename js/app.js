@@ -14,12 +14,9 @@ const handleNewItemFormSubmit = function(event) {
   const listElement = document.createElement('li');
 
   const title = createElementWithText('h2', this.title.value, listElement);
-
   const developer = createElementWithText('h3', this.developer.value, listElement);
-
   const genre = createElementWithText('p', this.genre.value, listElement);
-
-  const platform = createElementWithText('p', this.platform, listElement);
+  const platform = createElementWithText('p', this.platform.value, listElement);
 
 
   const videoGamesList = document.querySelector('#video-games-list');
